@@ -34,6 +34,6 @@ RUN echo "allow_url_fopen=on" >> /usr/local/etc/php/conf.d/php.ini
 
 #RUN composer update
 RUN composer install --optimize-autoloader --no-dev --no-interaction
-EXPOSE 8000
+#EXPOSE 8000
 
 CMD ["sh", "/app/init.sh"]

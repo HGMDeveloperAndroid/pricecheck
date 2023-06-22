@@ -14,5 +14,5 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return response(['welcome'=> 'Pricecheck API v2 WEB']);
+    return response(['welcome'=> 'Pricecheck API v2 WEB odsfcjewdofwjhfwssssl']);
 });

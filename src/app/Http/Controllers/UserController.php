@@ -10,6 +10,7 @@ use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Validation\Rule;
 use Symfony\Component\HttpFoundation\HeaderBag;
+use Illuminate\Support\Env;
 
 use App\Http\Resources\User as UserResource;
 use App\Http\Resources\UserCollection;
@@ -169,8 +170,13 @@ class UserController extends Controller
         }
 */
         $database = env('DB_DATABASE');
-        $varPath = env('DB_HOST')+' ; '+env('DB_PORT')+' ; '+env('DB_USERNAME')+' ; '+env('DB_PASSWORD');
-        return response()->json(['success' => true, 'message' => $varPath]);
+        //$varPath = env('DB_HOST')+' ; '+env('DB_PORT')+' ; '+env('DB_USERNAME')+' ; '+env('DB_PASSWORD');
+        return response()->json(['success' => true, 'message' => $database]);
+    }
+
+    function env($key, $default = null)
+    {
+        return Env::get($key, $default);
     }
 
     public function setupPassword(Request $request)

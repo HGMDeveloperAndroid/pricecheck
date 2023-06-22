@@ -152,7 +152,7 @@ class UserController extends Controller
             'remember_me' => 'boolean',
         ]);
 
-/*---
+
         if (Auth::attempt(['username' => request('username'), 'password' => request('password')])) {
             $user = Auth::user();
 
@@ -166,9 +166,9 @@ class UserController extends Controller
             return response()->json($success, $this->successStatus);
         } else {
             return response()->json(['error' => 'Unauthorized'], 401);
-        }*/
+        }
 
-        return response()->json(['success' => true, 'message' => 'Your password is ready.']);
+        //return response()->json(['success' => true, 'message' => 'Your password is ready.']);
     }
 
     public function setupPassword(Request $request)

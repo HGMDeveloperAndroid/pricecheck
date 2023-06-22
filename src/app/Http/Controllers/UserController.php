@@ -168,7 +168,7 @@ class UserController extends Controller
             return response()->json(['error' => 'Unauthorized'], 401);
         }
 
-        //return response()->json(['success' => true, 'message' => 'Your password is ready.']);
+        ///return response()->json(['success' => true, 'message' => 'Your password is ready.']);
     }
 
     public function setupPassword(Request $request)

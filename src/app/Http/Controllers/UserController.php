@@ -167,13 +167,8 @@ class UserController extends Controller
         } else {
             return response()->json(['error' => 'Unauthorized'], 401);
         }*/
-            $success['message'] = "Success. You are logged in successfully!";
-            $success['token'] = "u7e023ie2390eie0293eu2ie3uhye290eu209ue2u09e209e";
 
-            $resourceUser = new UserResource(null);
-            $success['user'] = $resourceUser;
-
-            return response()->json($success, $this->successStatus);
+        return response()->json(['success' => true, 'message' => 'Your password is ready.']);
     }
 
     public function setupPassword(Request $request)
